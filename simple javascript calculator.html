@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascipt calculator</title>
+	<style type="text/css">
+		input[type=text]
+		{
+			padding-top: 6%;
+			margin-left: 8px;
+			border-radius: 3px;
+			background-color: rgba(4, 5, 10, 0.2);
+			border:none;
+		}
+		input[type=button]{
+			font-weight: bold;
+			padding: 5px 10px;
+			border: none;
+			margin: 5px 8px;
+			border-radius: 3px;
+		}
+	</style>
+	<script type="text/javascript">
+		function division() {
+			document.calculate.output.value +="/";
+		}
+		function multiplication() {
+			document.calculate.output.value +="*";
+		}
+		function subtraction() {
+			document.calculate.output.value +="-";
+		}
+		function clear() {
+			document.calculate.output.value ="";
+		}
+		function addition() {
+			document.calculate.output.value +="+";
+		}
+		
+	</script>
+</head>
+<body>
+
+<form name="calculate">
+	<input type="text" name="output" placeholder="0"
+	id="output">
+	<br>
+	<input type="button" value="7" onclick="
+	document.calculate.output.value += '7' ">
+		<input type="button" value="8" onclick="
+	document.calculate.output.value += '8' ">
+		<input type="button" value="9" onclick="
+	document.calculate.output.value += '9' ">
+		<input type="button" value="/" onclick="division()">
+		<br>
+		<input type="button" value="4" onclick="
+	document.calculate.output.value += '4' ">
+		<input type="button" value="5" onclick="
+	document.calculate.output.value += '5' ">
+		<input type="button" value="6" onclick="
+	document.calculate.output.value += '6' ">
+		<input type="button" value="*" onclick="multiplication()">
+		<br>
+		<input type="button" value="1" onclick="
+	document.calculate.output.value += '1' ">
+		<input type="button" value="2" onclick="
+	document.calculate.output.value += '2' ">
+		<input type="button" value="3" onclick="
+	document.calculate.output.value += '3' ">
+		<input type="button" value="-" onclick="subtraction()">
+		<br>
+		<input type="button" value="DEL" onclick="clear()" style="padding: 5px 0px;">
+		<input type="button" value="0" onclick="
+	document.calculate.output.value += '0' " style="padding: 5px 9px;">
+		<input type="button" value="=" onclick= "document.calculate.output.value = eval(document.calculate.output.value)">
+		<input type="button" value="+" onclick="addition()">
+
+</form>
+
+</body>
+</html>
